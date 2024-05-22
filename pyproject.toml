@@ -8,11 +8,6 @@ minversion = "6.0"
 # '-ra' shows a summary of all test results, including passed, failed, skipped, xfailed, xpassed, and warnings.
 # '-q' reduces the verbosity of the output, making it more concise.
 addopts = "-ra -q"
-
-# Set multiple environment variables for pytest sessions
-env = """
-    PYTHONPATH=.
-"""
 testpaths = ["tests"]
 
 [tool.mypy]
