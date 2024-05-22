@@ -1,5 +1,5 @@
 
-# Project Title (ITV Project)
+# Project Title
 
 ## Description
 TODO: Brief description of what this project does.
@@ -20,20 +20,20 @@ python src/main.py -x XXX -y YYY
 
 
 ### Setting Up the Virtual Environment
-Create a virtual environment named `.itv_venv`:
+Create a virtual environment named `.venv`:
 ```
-python -m venv .itv_venv
+python3.11 -m venv .venv
 ```
 
 Activate the virtual environment:
 
 - On Windows:
   ```
-  .itv_venv\Scripts\activate
+  .venv\Scripts\activate
   ```
 - On macOS and Linux:
   ```
-  source .itv_venv/bin/activate
+  source .venv/bin/activate
   ```
 
 ### Installing the current folder as a Python package
