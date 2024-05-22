@@ -1,0 +1,23 @@
+[tool.autopep8]
+max-line-length = 120
+ignore = ["E501", "E128", "W503"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+# The 'addopts' option allows you to specify additional command-line options for pytest.
+# '-ra' shows a summary of all test results, including passed, failed, skipped, xfailed, xpassed, and warnings.
+# '-q' reduces the verbosity of the output, making it more concise.
+addopts = "-ra -q"
+
+# Set multiple environment variables for pytest sessions
+env = """
+    PYTHONPATH=.
+"""
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

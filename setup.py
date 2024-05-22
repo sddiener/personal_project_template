@@ -21,16 +21,12 @@ def read_requirements() -> list[str]:
 
 
 setup(
-    name='rag_gpt',
+    name='Project Name',
     version='1.0.0',
-    description='RAG Project',
+    description='This project ...',
     author='Stefan Diener',
-    package_dir={'': 'src'},
-    packages=find_packages(
-        'src',
-        exclude=('tests', 'docs', 'data', 'notebooks')
-    ),
-    # Include dependencies from requirements.txt
-    install_requires=read_requirements(),
+    package_dir={'': 'src'},  # Root directory for packages set to 'src'
+    packages=find_packages(where='src'),
+    install_requires=read_requirements(),  # Rad dependencies from requirements.txt
     python_requires='>=3.11',
 )
