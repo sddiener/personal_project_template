@@ -118,7 +118,6 @@ To debug the application in Visual Studio Code, use the provided configuration i
 - `docs/`: Docs and supporting notes/notebooks. Mostly contains Time Series Notes
 - `logs/`: Location of log files for all modules
 - `notebooks/`: Experimental scripts and notebooks.
-- `results/`: Folder containing the output(s) of the modelling module. 
 - `src/`: Source code of the project.
 - `tests/`: Test scripts for the application.
 
