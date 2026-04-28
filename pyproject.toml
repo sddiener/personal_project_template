@@ -2,12 +2,8 @@
 name = "personal_project_template"
 version = "0.1.0"
 description = "Project template"
-requires-python = ">=3.11"
-dependencies = [
-    "pytest",
-    "mypy",
-    "pre-commit"
-]
+requires-python = ">=3.14"
+dependencies = ["pytest", "pre-commit"]
 
 [build-system]
 requires = ["hatchling"]
@@ -18,16 +14,9 @@ minversion = "6.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
 
-[tool.mypy]
-python_version = "3.11"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
-ignore_missing_imports = true
-
 [tool.ruff]
 line-length = 120
-target-version = "py311"
+target-version = "py314"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
