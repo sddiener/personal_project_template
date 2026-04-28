@@ -1,12 +1,20 @@
-[tool.autopep8]
-max-line-length = 120
-ignore = ["E501", "E128", "W503"]
+[project]
+name = "personal_project_template"
+version = "0.1.0"
+description = "Project template"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest",
+    "mypy",
+    "pre-commit"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-# The 'addopts' option allows you to specify additional command-line options for pytest.
-# '-ra' shows a summary of all test results, including passed, failed, skipped, xfailed, xpassed, and warnings.
-# '-q' reduces the verbosity of the output, making it more concise.
 addopts = "-ra -q"
 testpaths = ["tests"]
 
@@ -16,3 +24,10 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
