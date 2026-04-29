@@ -1,3 +1,4 @@
+# --- project & dependencies ---
 [project]
 name = "personal_project_template"
 version = "0.1.0"
@@ -5,21 +6,37 @@ description = "Project template"
 requires-python = ">=3.14"
 dependencies = ["pytest", "pre-commit"]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
+# --- testing ---
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
 
+# --- linting ---
 [tool.ruff]
 line-length = 120
 target-version = "py314"
 
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP"]
+select = [
+    "E",   # pycodestyle — style errors (spacing, indentation, etc.)
+    "F",   # pyflakes — logic errors (unused imports, undefined names, etc.)
+    "I",   # isort — import ordering
+    "UP",  # pyupgrade — modernise syntax for your target python version
+    "RUF", # ruff-specific — extra catches (mutable defaults, implicit string concat, etc.)
+]
+ignore = [
+    "E501", # line length
+]
+
+# --- packaging ---
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/my_package"]
