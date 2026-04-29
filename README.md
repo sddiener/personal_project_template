@@ -5,7 +5,7 @@ A minimal Python project template using `uv` for dependency management and `ruff
 ## Quickstart
 
 ### Prerequisites
-- Python >= 3.11
+- Python >= 3.14
 - [`uv`](https://github.com/astral-sh/uv)
 
 ### Setup
